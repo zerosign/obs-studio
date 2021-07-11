@@ -10,13 +10,6 @@ GnomeWindowMonitor::GnomeWindowMonitor() {
 	g_assert_no_error(error);
 	g_assert_nonnull(this->_connection);
 
-	// TODO: this can't be done, since it only allowed for
-	//       internal usage this dbus method calls
-	//
-	// Thus, we need to use org.gnome.Shell.Eval
-	//
-	// global.get_window_actors().filter(a=>a.meta_window.has_focus()===true)[0]?.get_meta_window()?.get_wm_class()
-	//
 	this->_proxy = g_dbus_proxy_new_sync(this->_connection,
 					     G_DBUS_PROXY_FLAGS_NONE,
 					     NULL,
