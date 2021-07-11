@@ -43,6 +43,7 @@ public slots:
 	void on_toggleStartButton_clicked();
 };
 
+
 void GetWindowList(std::vector<std::string> &windows);
 void GetCurrentWindowTitle(std::string &title);
 void CleanupSceneSwitcher();

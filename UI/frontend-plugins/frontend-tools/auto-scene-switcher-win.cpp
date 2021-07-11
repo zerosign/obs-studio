@@ -43,8 +43,7 @@ static bool WindowValid(HWND window)
 	return true;
 }
 
-void GetWindowList(vector<string> &windows)
-{
+void GetWindowList(std::vector<std::string> &windows) {
 	HWND window = GetWindow(GetDesktopWindow(), GW_CHILD);
 
 	while (window) {
@@ -55,8 +54,7 @@ void GetWindowList(vector<string> &windows)
 	}
 }
 
-void GetCurrentWindowTitle(string &title)
-{
+void GetCurrentWindowTitle(std::string &title) {
 	HWND window = GetForegroundWindow();
 	DWORD id;
 
@@ -67,5 +65,6 @@ void GetCurrentWindowTitle(string &title)
 	}
 	GetWindowTitle(window, title);
 }
+
 
 void CleanupSceneSwitcher() {}
