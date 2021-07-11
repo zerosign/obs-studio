@@ -31,13 +31,7 @@ private:
 
 // Gnome Window Monitor implementation.
 //
-// Gnome should use dbus call to
-//
-// https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/master/data/dbus-interfaces/org.gnome.Shell.Introspect.xml#L37-59
-//
-// In gnome we could call GetWindows introspections then filter the window that
-// has focus. The lifecycle of dbus connection are the same as the lifecycle of this
-// object.
+// This use org.gnome.Shell.Eval to fetch current window title & all window titles
 //
 class GnomeWindowMonitor : NixWindowMonitor {
 public:
