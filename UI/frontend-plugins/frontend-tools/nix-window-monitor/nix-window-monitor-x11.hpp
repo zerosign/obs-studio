@@ -24,5 +24,9 @@ public:
 	void windowTitles(const vector<string> &titles);
 
 private:
+	bool ewmhIsSupported(const Display *display);
+	std::string getWindowTitle(const Display *display);
+	std::vector<Window> getTopLevelWindows(const Display *display, size_t idx);
+
 	Display *_display = 0;
 };
